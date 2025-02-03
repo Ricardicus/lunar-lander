@@ -225,7 +225,7 @@ def main():
         "--learning-rate", type=float, default=0.0003, help="Learning rate"
     )
     parser.add_argument(
-            "--static-punishment", type=float, default=0.001, help="Static negative reward, to avoid suboptimal 'fly forever' solution"
+            "--static-punishment", type=float, default=0.01, help="Static negative reward, to avoid suboptimal 'fly forever' solution"
     )
     parser.add_argument(
         "--action", type=str, default="retrain", help="What to do: [train|inference]"
@@ -238,7 +238,7 @@ def main():
     )
     parser.add_argument("--display-every", type=int, default=10, help="Display every")
     parser.add_argument("--batch", type=int, default=32, help="Display every")
-    parser.add_argument("--max-moves", type=int, default=10000000, help="Max moves (updates) to display during training")
+    parser.add_argument("--max-moves", type=int, default=1000, help="Max moves (updates) to display during training")
     parser.add_argument(
         "--max-buffer", type=int, default=100000, help="Max buffer size"
     )
