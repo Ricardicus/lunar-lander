@@ -67,11 +67,11 @@ def landing(args):
         episodes = 0
         while keep_inferencing:
             moves = 0
-            state, _ = env.reset()
+            state, _ = env_show.reset()
             keep_disp = True
             while keep_disp:
-                action = np.argmax(model(torch.from_numpy(dispstate)).detach().numpy())
-                dispstate, reward, terminated, truncated, info = env_show.step(action)
+                action = np.argmax(model(torch.from_numpy(state)).detach().numpy())
+                state, reward, terminated, truncated, info = env_show.step(action)
                 if terminated:
                     keep_disp = False
                 moves += 1
