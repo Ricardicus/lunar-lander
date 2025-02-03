@@ -13,4 +13,6 @@ python lunar_lander.py
 
 # "Demo"
 
+This is how it performs after 1000 episodes.
+
 ![Lunar Lander](lunar_lander.gif)
