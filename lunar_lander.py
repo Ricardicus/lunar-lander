@@ -75,6 +75,8 @@ def landing(args):
                 if terminated:
                     keep_disp = False
                 moves += 1
+                if moves > max_moves:
+                    keep_disp = False
             episodes += 1
             if episodes > max_episodes:
                 keep_inferencing = False
